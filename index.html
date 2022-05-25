@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-family:sans-serif ;
+}
+.calculator{
+    display: grid;
+    grid-template-columns:repeat(3,130px);
+    grid-auto-rows: 80px;
+
+    background-color: aquamarine;
+    position: relative;
+}
+.input{
+    grid-column: 1/4;
+    font-size: 20px;
+
+}
+.total,.previousValue{
+ position: absolute;
+}
+#clear{
+    grid-column: 1/4;
+}
+button{
+    font-size: 20px;
+
+}
+
+@media(max-width:450px){
+    .calculator{
+    display: grid;
+    grid-template-columns:repeat(3,110px);
+    grid-auto-rows: 70px;
+
+    background-color: aquamarine;
+    position: relative;
+}
+
+}
+
+</style>
+
+
+<body>
+
+<div class="calculator">
+<label for="in" class="total" >ADD</label>      
+<label for="in" class="previousValue" style="left: 60px;">0</label>
+
+<input type="number" id="in" class="input">    
+
+<button id="oprator" class="Addition">+</button>
+<button id="oprator" class="Subtraction">-</button>
+<button id="oprator" class="Division">/</button>
+<button id="oprator"  class="Multiplication">*</button>
+
+<button>1</button>
+<button>2</button>
+<button>3</button>
+<button>4</button>
+
+<button>5</button>
+<button>6</button>
+<button>7</button>
+<button>8</button>
+
+<button>9</button>
+<button>0</button>
+<button class="equal">=</button>
+<button id="clear"class="clear">clear</button>
+
+
+</div>
+
+
+    
+<script src="script.js"></script>
+</body>
+</html>
