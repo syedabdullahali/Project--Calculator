@@ -1,4 +1,4 @@
-const input = document.querySelector('.input')
+const  input = document.querySelector('.input')
 const oprators = document.querySelectorAll('#oprator');
 const buttons = document.querySelectorAll('button');
 const calculator = document.querySelector('.calculator')
@@ -21,9 +21,11 @@ if(e.target.className=="Addition"){
     privious.textContent = num
     clsIn()
 }else if(e.target.className=="Division"){    
+if(privious.textContent&&input.value){
     num = num /input.value 
     privious.textContent = num
     clsIn()
+}
 }else if(e.target.className=="Multiplication"){
     num *= input.value 
     privious.textContent = num
@@ -51,4 +53,6 @@ el.style.color="white"
 })
 document.querySelector('#clear').style.background="rgb(77, 64, 250)"
 document.querySelector('#clear').style.color="white"
+
+
 
